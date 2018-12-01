@@ -11,8 +11,8 @@ public class Main {
 
     public static void main(String[] args) {
         Random rand = new Random();
-
-        for (int i = 0; i < 3; i++) {
+        
+        for (int i = 0; i < master.length; i++) {
             for (int j = 0; j < master[0].length; j++) {
                 master[i][j] = 0;
             }
@@ -20,11 +20,11 @@ public class Main {
         master[0][0] = 2;
         master[1][0] = 2; // rows x columns
 
-       for (int i = 1; i < 9; i++) {
+       for (int i = 1; i < master[0].length - 1; i++) {
             master[2][i] = rand.nextInt(2);
        }
 
-       for (int i = 1; i < 9; i++) {
+       for (int i = 1; i < master[0].length - 1; i++) {
             if (master[2][i] == 0) {
                 master[0][i] = rand.nextInt(2);
             }
@@ -40,7 +40,7 @@ public class Main {
 
     public static void printGame() { //good
         //code for printing array and game 1-X, 2-*, 0-space, i rows x j columns
-        for (int j = master.length-1; j >= 0; j--) {
+        for (int j = master.length - 1; j >= 0; j--) {
             for (int i = 0; i < master[0].length; i++) {
                 System.out.printf("%s ", assignment(master[j][i]));
             }
@@ -142,7 +142,7 @@ public class Main {
         }
     }
 }
-        /*Scanner scan = new Scanner(System.in); This is a different game. A random number guesser between 0 and 100
+        /*Scanner scan = new Scanner(System.in);
         Random rand = new Random();
         String output;
         int rando = rand.nextInt(101);
@@ -170,4 +170,3 @@ public class Main {
         } while (rando != choice);
 
     }*/
-
