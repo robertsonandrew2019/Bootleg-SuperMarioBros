@@ -140,19 +140,9 @@ public class Main {
             case "default":
                 output = "That's not a command.";
         }
-
     }
-        //conditionals for each move
 }
-
-
-
-
-
-
-
-
-        /*Scanner scan = new Scanner(System.in);
+        /*Scanner scan = new Scanner(System.in); This is a different game. A random number guesser between 0 and 100
         Random rand = new Random();
         String output;
         int rando = rand.nextInt(101);
